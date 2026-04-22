@@ -1,73 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Yunan</title>
+    <title>Yunan Ardian — Video Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <div class="noise"></div>
+
     <header>
-        <h1>My Simple Page</h1>
+        <div class="logo">YA</div>
+        <nav>
+            <a href="#videos">Video</a>
+            <a href="#about">Tentang</a>
+            <a href="#contact">Kontak</a>
+        </nav>
     </header>
 
-    <main>
-        <section class="content">
-            <h2>Artikel</h2>
-            <p>Ini adalah konten artikel dengan berbagai informasi menarik.</p>
-<h1 style="color: red;">Heading 1</h1> <h2>Heading 2</h2> <h3>Heading 3</h3> <h4>Heading 4</h4> <h5>Heading 5</h5> <h6>Heading 6</h6>
-            <h3>Subjudul</h3>
-            <p>Ini adalah konten tambahan untuk informasi lebih dalam.</p>
+    <section class="hero">
+        <div class="hero-label">Portfolio</div>
+        <h1 class="hero-title">Yunan<br><em>Ardian</em></h1>
+        <p class="hero-sub">Web developer & kreator konten.<br>Belajar, bereksperimen, berkembang.</p>
+        <a href="#videos" class="cta">Lihat Karya <span>↓</span></a>
+        <div class="hero-line"></div>
+    </section>
 
-            <img src="https://www.thoughtco.com/thmb/GHAYb1yl4EcljSFLgj_BN2DMS_k=/1200x805/filters:fill(auto,1)/Al-Khwarizmi-head-5693a8955f9b58eba491f07c.jpg" alt="gambar">
+    <section class="videos" id="videos">
+        <div class="section-header">
+            <span class="section-num">01</span>
+            <h2>Video Terbaru</h2>
+        </div>
 
-            <aside>
-                <p>📌 Ini adalah konten sidebar untuk informasi tambahan</p>
-            </aside>
-        </section>
+        <div class="video-grid">
 
-        <section class="form-section">
-            <h2>Form Input</h2>
-            <form action="/submit" method="post">
-                
-                <label>Nama</label>
-                <input type="text" placeholder="Masukkan nama">
+            <div class="video-card featured">
+                <div class="video-thumb">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <span class="video-tag">Tutorial</span>
+                    <h3>Judul Video Pertama</h3>
+                    <p>Deskripsi singkat tentang isi video ini. Ganti dengan konten kamu sendiri.</p>
+                    <span class="video-date">April 2026</span>
+                </div>
+            </div>
 
-                <label>Nomor</label>
-                <input type="number">
+            <div class="video-card">
+                <div class="video-thumb">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 2" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <span class="video-tag">Project</span>
+                    <h3>Judul Video Kedua</h3>
+                    <p>Deskripsi singkat tentang isi video ini.</p>
+                    <span class="video-date">Maret 2026</span>
+                </div>
+            </div>
 
-                <label>Tanggal</label>
-                <input type="date">
+            <div class="video-card">
+                <div class="video-thumb">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 3" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <span class="video-tag">Vlog</span>
+                    <h3>Judul Video Ketiga</h3>
+                    <p>Deskripsi singkat tentang isi video ini.</p>
+                    <span class="video-date">Februari 2026</span>
+                </div>
+            </div>
 
-                <label>Waktu</label>
-                <input type="time">
+        </div>
+    </section>
 
-                <label>Warna</label>
-                <input type="color">
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <h2>Tentang</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Halo! Saya <strong>Yunan Ardian</strong>, sedang belajar web development dan membagikan perjalanan belajar lewat video.</p>
+                <p>Saat ini mendalami HTML, CSS, JavaScript, dan Git.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-num">3+</span>
+                    <span class="stat-label">Video</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">2026</span>
+                    <span class="stat-label">Mulai belajar</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">∞</span>
+                    <span class="stat-label">Semangat</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <button type="submit">Kirim</button>
-            </form>
-        </section>
-
-        <section class="table-section">
-            <h2>Data</h2>
-            <table>
-                <tr>
-                    <th>Nama</th>
-                    <th>Umur</th>
-                </tr>
-                <tr>
-                    <td>Andi</td>
-                    <td>20</td>
-                </tr>
-            </table>
-        </section>
-    </main>
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <h2>Kontak</h2>
+        </div>
+        <form action="/submit" method="post" class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" placeholder="Nama kamu">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="email@kamu.com">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pesan">Pesan</label>
+                <textarea id="pesan" rows="4" placeholder="Tulis pesanmu di sini..."></textarea>
+            </div>
+            <button type="submit">Kirim Pesan <span>→</span></button>
+        </form>
+    </section>
 
     <footer>
-        <p>&copy; By Yunan Ardian</p>
+        <div class="footer-left">© 2026 Yunan Ardian</div>
+        <div class="footer-right">Dibuat dengan HTML & CSS</div>
     </footer>
 
 </body>
