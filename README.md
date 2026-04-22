@@ -42,3 +42,10 @@ Dibangun sebagai bagian dari proses belajar dan eksplorasi frontend development.
 ---
 
 ## 📂 Struktur Project
+project/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── img/
