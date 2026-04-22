@@ -37,7 +37,7 @@ Dibangun sebagai bagian dari proses belajar dan eksplorasi frontend development.
 
 ## 📷 Preview
 
-![Preview Website](img/preview.png)
+![SS PREVIEW](img/preview.png) (img/preview 2.png)(img/preview 3.png)(img/preview 4.png)
 
 ---
 
