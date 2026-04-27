@@ -37,7 +37,12 @@ Dibangun sebagai bagian dari proses belajar dan eksplorasi frontend development.
 
 ## 📷 Preview
 
-![SS PREVIEW](img/preview.png) (img/preview 2.png)(img/preview 3.png)(img/preview 4.png)
+
+![SS PREVIEW](img/preview.png)
+![SS PREVIEW](img/preview2.png)
+![SS PREVIEW](img/preview3.png)   
+![SS PREVIEW](img/preview4.png) 
+
 
 ---
 
@@ -49,3 +54,11 @@ project/
 ├── script.js
 ├── README.md
 └── img/
+
+## 🔄 Update Terbaru
+
+### v2.0
+- Menambahkan koneksi database MySQL
+- Menampilkan video dari database
+- Menyimpan form kontak ke database
+- Migrasi dari HTML ke PHP
