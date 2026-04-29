@@ -1,4 +1,5 @@
 <?php
+session_start();
 include __DIR__ . "/koneksi.php";
 
 $query = mysqli_query($conn, "SELECT * FROM videos");
@@ -73,18 +74,19 @@ $query = mysqli_query($conn, "SELECT * FROM videos");
 
     <h2>Kontak</h2>
 
-    <?php if (isset($_GET['status']) && $_GET['status'] === 'sukses'): ?>
+    <?php if (!empty($_SESSION['status']) && $_SESSION['status'] === 'sukses'): ?>
         <p class="success">Pesan berhasil dikirim 🚀</p>
+        <?php unset($_SESSION['status']); ?>
     <?php endif; ?>
 
-    <form action="kirim.php" method="post" class="contact-form">
+    <form action="kirim.php" method="post" class="contact-form" id="contactForm">
 
         <div class="form-row">
-            <input type="text" name="nama" placeholder="Nama" required>
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" id="nama" name="nama" placeholder="Nama" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
         </div>
 
-        <textarea name="pesan" placeholder="Pesan..." required></textarea>
+        <textarea id="pesan" name="pesan" placeholder="Pesan..." required></textarea>
 
         <button type="submit">Kirim Pesan</button>
 

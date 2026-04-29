@@ -1,4 +1,5 @@
 <?php
+session_start();
 include __DIR__ . "/koneksi.php";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -16,7 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $hasil = mysqli_stmt_execute($stmt);
 
     if ($hasil) {
-        header("Location: index.php?status=sukses");
+        $_SESSION['status'] = 'sukses';
+        header("Location: index.php");
         exit;
     } else {
         echo "Error: " . mysqli_error($conn);

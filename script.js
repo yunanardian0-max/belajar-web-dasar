@@ -17,8 +17,6 @@ if (cta) {
 
 const form = document.querySelector(".contact-form");
 
-const form = document.getElementById("contactForm");
-
 if (form) {
     form.addEventListener("submit", function(e) {
         const nama = document.getElementById("nama").value.trim();
