@@ -7,12 +7,7 @@
     --accent: #e8ff47;
 }
 
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'DM Sans', sans-serif;
@@ -20,175 +15,49 @@ body {
     color: var(--text);
 }
 
-/* HEADER */
 header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
+    position: fixed; width: 100%; top: 0; padding: 20px 50px;
+    display: flex; justify-content: space-between;
+    background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); z-index: 1000;
 }
 
-.logo {
-    color: var(--accent);
-    font-weight: bold;
-}
+.logo { color: var(--accent); font-weight: bold; }
+nav a { margin-left: 30px; color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--text); }
 
-nav a {
-    margin-left: 30px;
-    color: var(--muted);
-    text-decoration: none;
-}
+.hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 50px; }
+.hero-label { color: var(--muted); margin-bottom: 10px; }
+.hero-title { font-family: 'Syne', sans-serif; font-size: 80px; }
+.hero-title span { color: var(--accent); }
+.hero-sub { margin-top: 20px; color: var(--muted); }
+.cta { margin-top: 30px; background: var(--accent); color: black; padding: 12px 24px; text-decoration: none; width: fit-content; }
 
-nav a:hover {
-    color: var(--text);
-}
+section { max-width: 1100px; margin: auto; padding: 100px 20px; }
 
-/* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 50px;
-}
+.video-grid { margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+.video-card { background: var(--card); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; transition: 0.3s; }
+.video-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+.video-wrapper { position: relative; padding-top: 56.25%; }
+.video-wrapper iframe { position: absolute; width: 100%; height: 100%; top: 0; }
+.video-content { padding: 16px; }
+.video-content h3 { margin-bottom: 6px; }
+.video-content p { color: var(--muted); font-size: 14px; }
 
-.hero-label {
-    color: var(--muted);
-    margin-bottom: 10px;
-}
+.contact h2 { margin-bottom: 20px; }
+.contact-form { max-width: 600px; }
+.form-row { display: flex; gap: 12px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 14px; background: var(--card); border: 1px solid var(--border); color: var(--text); margin-bottom: 12px; }
+.contact-form textarea { min-height: 120px; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); outline: none; }
+.contact-form button { background: var(--accent); color: black; padding: 14px; border: none; width: 100%; font-weight: bold; cursor: pointer; margin-top:10px; }
+.contact-form button:hover { background: #d4eb2e; }
+.success { color: var(--accent); margin-bottom: 20px; }
 
-.hero-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 80px;
-}
-
-.hero-title span {
-    color: var(--accent);
-}
-
-.hero-sub {
-    margin-top: 20px;
-    color: var(--muted);
-}
-
-.cta {
-    margin-top: 30px;
-    background: var(--accent);
-    color: black;
-    padding: 12px 24px;
-    text-decoration: none;
-    width: fit-content;
-}
-
-/* SECTION */
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 100px 20px;
-}
-
-/* VIDEOS */
-.video-grid {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 24px;
-}
-
-.video-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    overflow: hidden;
-    transition: 0.3s;
-}
-
-.video-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
-}
-
-/* RATIO VIDEO */
-.video-wrapper {
-    position: relative;
-    padding-top: 56.25%;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-}
-
-/* VIDEO TEXT */
-.video-content {
-    padding: 16px;
-}
-
-.video-content h3 {
-    margin-bottom: 6px;
-}
-
-.video-content p {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* CONTACT */
-.contact h2 {
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    max-width: 600px;
-}
-
-.form-row {
-    display: flex;
-    gap: 12px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 14px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--text);
-    margin-bottom: 12px;
-}
-
-.contact-form textarea {
-    min-height: 120px;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--accent);
-    outline: none;
-}
-
-.contact-form button {
-    background: var(--accent);
-    color: black;
-    padding: 14px;
-    border: none;
-    width: 100%;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background: #d4eb2e;
-}
-
-/* SUCCESS */
-.success {
-    color: var(--accent);
-    margin-bottom: 20px;
-}
+/* MODAL & TTD STYLE */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); }
+.modal-content { background-color: var(--card); margin: 10% auto; padding: 20px; border: 1px solid var(--border); width: fit-content; text-align: center;}
+.modal-content h3 { margin-bottom: 15px; }
+.modal-content button { background: var(--border); color: white; padding: 8px 16px; border: none; cursor: pointer; margin-top: 10px;}
+.modal-content button#saveBtn { background: var(--accent); color: black; }
+#openTtdBtn { background: var(--border); color: white; padding: 10px; border: none; cursor: pointer; margin-bottom: 10px; width: 100%;}
+#bgmToggle { background: var(--card); color: var(--accent); border: 1px solid var(--border); padding: 10px 15px; border-radius: 20px; cursor: pointer; }
